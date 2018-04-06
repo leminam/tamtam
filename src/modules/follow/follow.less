@@ -3,22 +3,45 @@
   background-repeat: no-repeat;
   height: 1299px;
   background-position: 50% 50%; 
-  background-size: cover;  
-}
-.follow__instagram {
-  text-align: center;
-}
-.follow__instagram-title {
-  text-transform: uppercase;
-  font-weight: 900;
-  font-size: 35px;
-  color: @font-bluish-gray;
-  display: block;
-  padding: 90px 0 15px 0;
-}
-.follow__instagram-name {
-  font-weight: 400;
-  font-size: 30px;
-  display: block;
-  color: @font-white;
+  background-size: cover;
+    &__instagram {
+    text-align: center;
+  }
+    &__instagram-title {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 35px;
+    color: @font-bluish-gray;
+    display: block;
+    padding: 90px 0 15px 0;
+  }
+    &__instagram-name {
+    font-weight: 400;
+    font-size: 30px;
+    display: block;
+    color: @font-white;
+    padding-bottom: 50px;
+  }
+    &__instagram-story {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 940px;
+    margin: 0 auto;
+  }
+    &__instagram-item {
+    min-height: 380px;
+    background-color: @font-white;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+    &__instagram-description {
+    display: flex;
+    width: 300px;
+    color: @font-warm-grey;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 15px 10px 15px 15px;
+    box-sizing: border-box;
+  }  
 }

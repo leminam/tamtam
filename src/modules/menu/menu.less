@@ -1,16 +1,26 @@
-.header__menu {
-  font-weight: 700;
-  font-size: 19px;
+.header {
+  background-color: @font-black;
+  width: 1440px;
+  height: 80px;
   display: flex;
-}
-.header__menu-link {
-  text-decoration: none;
-  color: @font-warm-grey;
-}
-.header__menu-item {
-  padding: 0 20px 0 20px;
-  line-height: 78px;
-}
-.header__menu-link:hover {
-  color: @font-white;
+    &__logo-image {
+    height: 32px;
+    padding: 24px 30px 24px 30px;
+  }
+    &__menu {
+    font-weight: 700;
+    font-size: 19px;
+    display: flex;
+  }  
+    &__menu-link {
+    text-decoration: none;
+    color: @font-warm-grey;
+  }
+    &__menu-item {
+    padding: 0 20px 0 20px;
+    line-height: 78px;
+  }
+    &__menu-link:hover {
+    color: @font-white;
+  }
 }
