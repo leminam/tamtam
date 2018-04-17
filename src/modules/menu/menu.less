@@ -1,16 +1,29 @@
 .header {
   background-color: @font-black;
-  width: 1440px;
+  width: auto;
   height: 80px;
   display: flex;
+
+  @media (max-width: 480px) {
+  flex-flow: row-reverse nowrap;
+  justify-content: flex-end;
+}
     &__logo-image {
-    height: 32px;
+    height: 33px;
     padding: 24px 30px 24px 30px;
+
+    @media (max-width: 480px) {
+    margin-left: 75%;
   }
+  }    
     &__menu {
     font-weight: 700;
     font-size: 19px;
     display: flex;
+
+    @media (max-width: 480px) {
+    display: block;
+  }
   }  
     &__menu-link {
     text-decoration: none;
@@ -19,8 +32,23 @@
     &__menu-item {
     padding: 0 20px 0 20px;
     line-height: 78px;
+
+    @media (max-width: 480px) {
+    display: none;
+  }
   }
     &__menu-link:hover {
     color: @font-white;
+  }
+    &__mobile {
+    display: none;
+    
+    @media (max-width: 480px) {
+    display: block;
+  }    
+  }
+    &__mobile-icon {
+    height: 42px;
+    padding: 20px 30px 24px 30px;
   }
 }

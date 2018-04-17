@@ -79,6 +79,12 @@ plugins: [
       filename: './index.html',
       hash: true
     }),
+    new HtmlWebpackPlugin({
+      //inject: false,
+      template: './contact.hbs',
+      filename: './contact.html',
+      hash: true
+    }),    
     new CopyWebpackPlugin([
       {from: 'static/img/', to: 'static/img/'},
       {from: 'api/', to: 'api/'}
