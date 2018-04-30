@@ -8,23 +8,22 @@ time, mark, audio, video, span {
   vertical-align: baseline;
 }
 
-
-
-
-
-@font-fresh-green: #7bdb4c;
-@font-bluish-gray: #789199;
-@font-gunmetal: #555d60;
-@font-salmon: #ff7676;
-@font-white: #ffffff;
-@font-black: #000000;
-@font-warm-grey: #8e8e8e;
-
 .l-layout {
   font-family: 'Lato';
+  min-width: 350px;
+}
+
+h1 {
+  font: 900 48px @Lato;
+  text-transform: uppercase;
+}
+h2 {
+  font: 900 38px @Lato;
+  text-transform: uppercase;
 }
 
 @import 'fonts.less';
+@import 'variables.less';
 @import '../../modules/menu/menu.less';
 @import '../../modules/intro/intro.less';
 @import '../../modules/follow/follow.less';

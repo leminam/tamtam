@@ -3,148 +3,138 @@
   background-repeat: no-repeat;
   background-position: 50% 65%;
   background-size: cover;
-    &__client {
-    font-weight: 900;
-    font-size: 50px;
-    text-transform: uppercase;
+
+  &__client {
     text-align: center;
     padding-top: 300px;
   }
-    &__case {
-    text-align: center;  
+  &__case {
+    text-align: center;
+    padding: 35px 0 175px 0;
   }
-    &__case-button {
-    font-weight: 700;
-    font-size: 15px;
+  &__case-button {
+    font: 700 15px/20px @Lato;
     width: 150px;
     height: 40px;
     border-radius: 40px;
-    background-color: @font-black;
+    background-color: @color-black;
     color: @font-white;
     cursor: pointer;
     box-sizing: border-box;
-    border: 1px solid @font-black;
+    border: 1px solid @color-black;
     display: inline-block;
-    margin: 35px 6px 175px 6px;
-    line-height: 24px;
+    margin: 0 6px 0 6px;
   }
-    &__case-button:hover {
-    background-color: @font-salmon;
-    border: 1px solid @font-salmon;  
+  &__case-button:hover {
+    background-color: @color-salmon;
+    border: 1px solid @color-salmon;  
   }
-    &__case-button_nav {
+  &__case-button_nav {
     width: 40px;
     height: 40px;
     border-radius: 20px;
-    font-size: 18px;
   }
-    &__scroll {
+  &__scroll {
     text-align: center;  
   }
-    &__scroll-button {
+  &__scroll-button {
     width: 54px;
     height: 54px;
     border-radius: 27px;
     cursor: pointer;
     box-sizing: border-box;
-    border: 1px solid @font-white;
-    background-color: @font-white;
+    border: 1px solid @color-white;
+    background-color: @color-white;
     background-image: url("/static/img/icons/mouse-black.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 22px 34px;
 
-    @media (min-width: 481px) and (max-width:768px) {
-    background-image: url("/static/img/icons/arrow-black.png");
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    background-size: 15px;
-    margin-bottom: 20px;
-
+    @media (max-width: @tabletWidth) {
+      background-image: url("/static/img/icons/arrow-black.png");
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      background-size: 15px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: @mobileWidth) {
+      background-image: url("/static/img/icons/arrow-black.png");
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      background-size: 15px;
+      margin-bottom: 20px;    
+    }    
   }
-    @media (max-width: 480px) {
-    background-image: url("/static/img/icons/arrow-black.png");
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    background-size: 15px;
-    margin-bottom: 20px;    
-  }    
-  }
-    &__scroll-button:hover {
+  &__scroll-button:hover {
     background-image: url("/static/img/icons/mouse-salmon.png");
 
-    @media (min-width: 481px) and (max-width:768px) {
-    background-image: url("/static/img/icons/arrow-salmon.png");
+    @media (max-width: @tabletWidth) {
+      background-image: url("/static/img/icons/arrow-salmon.png");
+    }
+    @media (max-width: @mobileWidth) {
+      background-image: url("/static/img/icons/arrow-salmon.png");
+    }
   }
-    @media (max-width: 480px) {
-    background-image: url("/static/img/icons/arrow-salmon.png");
-  }
-  }
-    &__scroll-nav {
-    font-weight: 700;
-    font-size: 20px;
+  &__scroll-nav {
+    font: 700 20px @Lato;
     color: @font-white;
     margin-top: 4px;
 
-    @media (min-width: 481px) and (max-width:768px) {
-    display: none;
+    @media (max-width: @tabletWidth) {
+      display: none;
+    }
+    @media (max-width: @mobileWidth) {
+      display: none;
+    }
   }
-    @media (max-width: 480px) {
-    display: none;
-  }
-  }
-    &__about {
+  &__about {
     text-align: center;
-    background-color: @font-white;
+    background-color: @color-white;
     box-sizing: border-box;  
     padding: 100px 250px 100px 250px;
     
-    @media (min-width: 1025px) and (max-width:1440px) {
-    padding: 100px 140px 100px 140px;      
+    @media (max-width: @desktopHDWidth) {
+      padding: 100px 140px 100px 140px;      
+    }
+    @media (max-width: @desktopWidth) {
+      padding: 80px 50px 80px 50px;
+    }
+    @media (max-width: @tabletWidth) {
+      padding: 60px 50px 60px 50px;
+    }
+    @media (max-width: @mobileWidth) {
+      padding: 40px 30px 40px 30px;
+    }
   }
-    @media (min-width: 769px) and (max-width:1024px) {
-    padding: 80px 50px 80px 50px;
-  }
-    @media (min-width: 481px) and (max-width:768px) {
-    padding: 60px 50px 60px 50px;
-  }
-    @media (max-width: 480px) {
-    padding: 40px 30px 40px 30px;
-  }
-  }
-    &__about-title {
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 38px;
+  &__about-title {
     display: block;
     padding-bottom: 20px;
 
-    @media (min-width: 769px) and (max-width:1024px) {
-    font-size: 34px;
+    @media (max-width: @desktopWidth) {
+      font-size: 34px;
+    }
+    @media (max-width: @tabletWidth) {
+      font-size: 30px;  
+    }
+    @media (max-width: @mobileWidth) {
+      font-size: 24px;  
+    }
   }
-    @media (min-width: 481px) and (max-width:768px) {
-    font-size: 30px;  
-  }
-    @media (max-width: 480px) {
-    font-size: 24px;  
-  }
-  }
-    &__about-text {
-    font-weight: 300;
-    font-size: 27px;
+  &__about-text {
+    font: 300 27px @Lato;
     display: block;
 
-    @media (min-width: 769px) and (max-width:1024px) {
-    font-size: 25px;
-  }
-    @media (min-width: 481px) and (max-width:768px) {
-    font-size: 23px;  
-  }
-    @media (max-width: 480px) {
-    font-size: 21px;  
-  }    
+    @media (max-width: @desktopWidth) {
+      font-size: 25px;
+    }
+    @media (max-width: @tabletWidth) {
+      font-size: 23px;  
+    }
+    @media (max-width: @mobileWidth) {
+      font-size: 21px;  
+    }    
   }
 }
 .fa-angle-right {

@@ -1,83 +1,58 @@
 .header {
-  background-color: @font-black;
+  background-color: @color-black;
   width: auto;
   height: 80px;
   display: flex;
 
-  @media (max-width: 480px) {
-  flex-flow: row-reverse nowrap;
-  justify-content: flex-end;
-}
-    &__logo-image {
-    height: 34px;
-    width: 34px;
-    margin: 23px 30px 23px 30px;
-
-    @media (max-width: 480px) {
-    margin: 25px 0 0 0;
-    padding: 0 0 0 0;
+  @media (max-width: @mobileWidth) {
+    flex-flow: row-reverse nowrap;
+    justify-content: space-between;
   }
+
+  &__logo-image {
+    height: 35px;
+    margin: 22px 30px 0 30px;
   }    
-    &__menu {
-    font-weight: 700;
-    font-size: 19px;
+  &__menu {
+    font: 700 20px @Lato;
     display: flex;
 
-    @media (max-width: 480px) {
-    display: block;
-  }
+    @media (max-width: @mobileWidth) {
+      display: block;
+    }
   }  
-    &__menu-link {
+  &__menu-link {
     text-decoration: none;
     color: @font-warm-grey;
   }
-    &__menu-item {
+  &__menu-item {
     padding: 0 20px 0 20px;
     line-height: 78px;
 
-    @media (max-width: 480px) {
-    display: none;
+    @media (max-width: @mobileWidth) {
+      display: none;
+    }
   }
-  }
-    &__menu-link:hover {
+  &__menu-link:hover {
     color: @font-white;
   }
-    &__mobile {
+  &__mobile {
     display: none;
+    width: auto;
     
-    @media (max-width: 480px) {
+    @media (max-width: @mobileWidth) {
+      display: inline-block;
+    }    
+  }
+  &__mobile-icon {
+    height: 37px;
+    margin: 22px 30px 16px 30px;
+  }
+
+}
+.header__mobile:hover .header__menu-item {
+  
+  @media (max-width: @mobileWidth) {
     display: block;
   }    
-  }
-    &__mobile-icon {
-    height: 42px;
-    margin: 20px 150px 0 30px;
-  }
 }
-
-.header__mobile-menu {
-  display: none;
-  font-size: 35px;
-  background-color: black;
-  padding: 30px 0 30px 0;
-  border-top: 1px solid @font-white;
-  margin-top: 10px;
-  width: 480px;
-  text-align: center;
-}
-.header__mobile-item {
-  line-height: 80px;
-}
-.header__mobile-wrapper:hover .header__mobile-menu {
-  @media (max-width: 480px) {
-  display: block;
-}
-}
-.header__mobile-link {
-  text-decoration: none;
-  color: @font-white;
-}
-.header__mobile-link:hover {
-  color: @font-salmon;  
-}
-

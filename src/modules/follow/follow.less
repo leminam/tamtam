@@ -4,37 +4,33 @@
   background-position: 50% 50%;
   background-size: cover;
   
-    &__instagram {
+  &__wrapper {
     text-align: center;
   }
-    &__instagram-title {
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 35px;
+  &__title {
     color: @font-bluish-gray;
     display: block;
-    padding: 90px 0 15px 0;
-
-    @media (min-width: 769px) and (max-width:1024px) {
     padding: 70px 0 15px 0;
+
+    @media (max-width: @desktopWidth) {
+      padding: 70px 0 15px 0;
+    }
+    @media (max-width: @tabletWidth) {
+      padding: 50px 0 15px 0;
+      font-size: 29px;
+    }
+    @media (max-width: @mobileWidth) {
+      padding: 50px 0 15px 0;
+      font-size: 26px;
+    }    
   }
-    @media (min-width: 481px) and (max-width:768px) {
-    padding: 50px 0 15px 0;
-    font-size: 29px;
-  }
-    @media (max-width: 480px) {
-    padding: 50px 0 15px 0;
-    font-size: 26px;
-  }    
-  }
-    &__instagram-name {
-    font-weight: 400;
-    font-size: 30px;
+  &__name {
     display: block;
     color: @font-white;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
+    font: 400 30px/40px @Lato;
   }
-    &__instagram-story {
+  &__story {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -42,30 +38,30 @@
     width: 940px;
     margin: 0 auto;
 
-    @media (min-width: 1025px) and (max-width:1440px) {
+    @media (max-width: @desktopWidth) {
+      width: 640px;
+      justify-content: space-around;
+    }
+    @media (max-width: @tabletWidth) {
+      width: 320px;
+      justify-content: center;
+    }
+    @media (max-width: @mobileWidth) {
+      width: 320px;
+      justify-content: center;
+    }
   }
-    @media (min-width: 769px) and (max-width:1024px) {
-    width: 640px;
-  }
-    @media (min-width: 481px) and (max-width:768px) {
-    width: 320px;
-  }
-    @media (max-width: 480px) {
-    width: 320px;
-  }
-  }
-    &__instagram-item {
+  &__story-item {
     min-height: 380px;
-    background-color: @font-white;
+    background-color: @color-white;
     margin-bottom: 20px;
     text-align: left;
   }
-    &__instagram-description {
+  &__description {
+    font: 700 15px @Lato;
     display: flex;
     width: 300px;
     color: @font-warm-grey;
-    font-weight: 700;
-    font-size: 15px;
     padding: 15px 10px 15px 15px;
     box-sizing: border-box;
   }  
