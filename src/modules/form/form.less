@@ -1,0 +1,170 @@
+.form {
+  background-image: url("/static/img/forest-background.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  text-align: center;
+
+  &__title {
+    color: @font-white;
+    padding: 0 120px 50px 120px;
+    line-height: 50px;
+
+    @media (max-width: @tabletWidth) {
+      font: 900 26px @Lato;
+      padding: 0 20px 20px 20px;
+    }  
+  }
+  &__wrapper {
+    padding: 100px 0 215px 0;
+    margin: 0 auto;
+    width: 630px;
+
+    @media (max-width: @tabletWidth) {
+      width: 330px;
+      padding: 50px 0 90px 0;
+    }
+  }
+  &__attention {
+    height: 60px;
+    color: @font-white;
+    background-color: rgba(0, 0, 0, 0.2);
+    font: 700 18px @Lato;
+    text-align: left;
+    padding: 15px 0 0 20px;
+    box-sizing: border-box;
+
+    @media (max-width: @tabletWidth) {
+      font-size: 15px;
+      padding: 15px 0 0 10px;
+    }
+  }
+  &__attention-circle {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 4px 0 0 12px;
+    margin-right: 5px;
+
+  }
+  &__general {
+    width: 295px;
+    height: 50px;
+    box-sizing: border-box;
+    border: 0.5px solid @color-white;
+    margin: 5px 10px 5px 0;
+    padding: 0 20px 0 20px;
+    font: 300 18px @Lato;
+    color: @font-gunmetal;
+
+    @media (max-width: @tabletWidth) {
+      display: inline-block;
+      width: 300px;
+    }
+  }
+  &__general_large {
+    width: 600px;
+    height: 120px;
+    padding-bottom: 80px;
+
+    @media (max-width: @tabletWidth) {
+      width: 300px;
+    }  
+  }
+  &__background {
+    background-color: rgba(255, 255, 255, .5);
+    padding: 10px 0 10px 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  &__button {
+    font: 700 15px/20px @Lato;
+    width: 150px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #ff5454;
+    color: @font-white;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 1px solid #ff5454;
+    display: inline-block;
+    margin-top: 35px;
+    outline: none;
+  }
+  &__button:hover {
+    background-color: @color-salmon;
+    border: 1px solid @color-salmon;
+  }
+  &__icon {
+    height: 20px;
+    position: absolute;
+    top: 19px;
+    right: 17px;
+    display: none;
+  }
+  &__item {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+  }
+  &__tooltip {
+    display: none;
+    visibility: hidden;
+    width: 295px;
+    height: 50px;
+    background-color: #555d60;
+    color: @font-white;
+    top: 55px;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    padding: 12px 20px 12px 20px;
+    box-sizing: border-box;
+
+    @media (max-width: @tabletWidth) {
+      width: 300px;
+    }
+  }
+  &__tooltip::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 10%;
+    margin-left: -7px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent transparent #555d60 transparent;
+  }
+  &__tooltip_large {
+    width: 600px;
+    top: 75px;
+
+    @media (max-width: @tabletWidth) {
+      width: 300px;
+    }    
+  }
+  &__item:hover {
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  &__item_large:hover {
+    margin-bottom: 30px;
+  }
+  &__item:hover .form__tooltip {
+    display: inline-block;
+    visibility: visible;
+  }
+  &__item:hover .form__icon {
+    display: inline-block;
+  }
+}
+input[type="text"]:focus::-webkit-input-placeholder {
+  color: @font-black;
+}
+input[type="text"]:focus {
+  outline: none;
+}
