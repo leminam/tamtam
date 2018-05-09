@@ -1,36 +1,57 @@
 .header {
   background-color: @color-black;
-  height: 80px;
-  line-height: 85px;
+  line-height: 80px;
 
-
-
+  @media (max-width: @mobileWidth) {
+    text-align: center;  
+  }
   &__logo-image {
     height: 35px;
     margin: 20px 20px 0 30px;
   }
   &__menu {
     display: inline-block;
+
+    @media (max-width: @mobileWidth) {
+      display: block;    
+      text-align: center;
+    }
   }
   &__logo-wrapper {
     display: inline-block;
     float: left;
-    
+
+    @media (max-width: @mobileWidth) {
+      float: none;
+    }    
   }
   &__menu-desktop {
     font: 700 20px @Lato;
     list-style-type: none;
+
+    @media (max-width: @mobileWidth) {
+      font: 900 33px/85px @Lato;
+      border-top: 2px solid white;
+      margin-top: -15px;
+    } 
   }  
   &__menu-link {
     text-decoration: none;
     color: @font-warm-grey;
+
+    @media (max-width: @mobileWidth) {
+      color: @font-white;
+    }
   }
   &__menu-item {
     padding: 0 20px 0 20px;
     display: inline;
-}
+
+    @media (max-width: @mobileWidth) {
+      display: block;
+    }
+  }
   &__menu-link:hover {
     color: @font-salmon;
   }
-
 }

@@ -48,7 +48,6 @@
     box-sizing: border-box;
     padding: 4px 0 0 12px;
     margin-right: 5px;
-
   }
   &__general {
     width: 295px;
@@ -106,6 +105,9 @@
     right: 17px;
     display: none;
   }
+  &__icon_visible {
+    display: inline-block;
+  }
   &__item {
     position: relative;
     display: inline-block;
@@ -129,6 +131,10 @@
       width: 300px;
     }
   }
+  &__tooltip_visible {
+    display: inline-block;
+    visibility: visible;
+  }
   &__tooltip::after {
     content: " ";
     position: absolute;
@@ -146,19 +152,6 @@
     @media (max-width: @tabletWidth) {
       width: 300px;
     }    
-  }
-  &__item:hover {
-    
-  }
-  &__item_large:hover {
-    
-  }
-  &__item:hover .form__tooltip {
-    display: inline-block;
-    visibility: visible;
-  }
-  &__item:hover .form__icon {
-    display: inline-block;
   }
 }
 input[type="text"]:focus::-webkit-input-placeholder {
