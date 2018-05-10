@@ -54,4 +54,15 @@
   &__menu-link:hover {
     color: @font-salmon;
   }
+  &__menu-nav {
+    height: 38px;
+    position: absolute;
+    top: 18px;
+    left: 23px;
+    display: none;
+
+    @media (max-width: @mobileWidth) {
+      display: inline-block;
+    }
+  }
 }
