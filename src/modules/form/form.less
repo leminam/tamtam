@@ -11,7 +11,7 @@
     line-height: 50px;
 
     @media (max-width: @tabletWidth) {
-      font: 900 26px @Lato;
+      font: 900 28px @Lato;
       padding: 0 20px 20px 20px;
     }  
   }
@@ -54,7 +54,6 @@
     height: 50px;
     box-sizing: border-box;
     border: 0.5px solid @color-white;
-    margin: 5px 10px 5px 0;
     padding: 0 20px 0 20px;
     font: 300 18px @Lato;
     color: @font-gunmetal;
@@ -66,8 +65,7 @@
   }
   &__general_large {
     width: 600px;
-    height: 120px;
-    padding-bottom: 80px;
+    padding-top: 10px;
 
     @media (max-width: @tabletWidth) {
       width: 300px;
@@ -101,8 +99,8 @@
   &__icon {
     height: 20px;
     position: absolute;
-    top: 19px;
-    right: 17px;
+    top: 15px;
+    right: 8px;
     display: none;
   }
   &__icon_visible {
@@ -112,28 +110,34 @@
     position: relative;
     display: inline-block;
     text-align: left;
+    margin: 7px 10px 7px 0;
   }
   &__tooltip {
-    display: none;
-    visibility: hidden;
-    width: 295px;
-    height: 50px;
     background-color: #555d60;
     color: @font-white;
-    top: 55px;
-    left: 0;
+    visibility: hidden;
+    width: 295px;
+    text-align: left;
+    line-height: 40px;
     position: absolute;
     z-index: 1;
-    padding: 12px 20px 12px 20px;
+    bottom: -40px;
+    left: 60px;
+    margin-left: -60px;
+    padding-left: 20px;
     box-sizing: border-box;
 
     @media (max-width: @tabletWidth) {
       width: 300px;
     }
   }
-  &__tooltip_visible {
-    display: inline-block;
-    visibility: visible;
+  &__tooltip_large {
+    bottom: -37px;
+    width: 600px;
+
+    @media (max-width: @tabletWidth) {
+      width: 300px;
+    }    
   }
   &__tooltip::after {
     content: " ";
@@ -145,18 +149,19 @@
     border-style: solid;
     border-color: transparent transparent #555d60 transparent;
   }
-  &__tooltip_large {
-    width: 600px;
-    top: 75px;
-
-    @media (max-width: @tabletWidth) {
-      width: 300px;
-    }    
-  }
 }
 input[type="text"]:focus::-webkit-input-placeholder {
   color: @font-black;
 }
 input[type="text"]:focus {
   outline: none;
+}
+textarea:focus::-webkit-input-placeholder {
+  color: @font-black;
+}
+textarea:focus {
+  outline: none;
+}
+.form__item:hover .form__tooltip {
+    visibility: visible;
 }

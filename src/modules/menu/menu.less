@@ -3,7 +3,8 @@
   line-height: 80px;
 
   @media (max-width: @mobileWidth) {
-    text-align: center;  
+    text-align: center;
+    line-height: 60px;
   }
   &__logo-image {
     height: 35px;
@@ -30,9 +31,16 @@
     list-style-type: none;
 
     @media (max-width: @mobileWidth) {
-      font: 900 33px/85px @Lato;
+      font: 900 33px/90px @Lato;
       border-top: 2px solid white;
-      margin-top: -15px;
+      position: absolute;
+      top: 78px;
+      left: 0;
+      background-color: black;
+      display: block;
+      width: 100%;
+      min-width: 350px;
+      z-index: 2;
     } 
   }  
   &__menu-link {
