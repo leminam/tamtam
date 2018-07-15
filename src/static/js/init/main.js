@@ -18,8 +18,6 @@ function initMenu() {
   });
 }
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
   initMenu();
 });
