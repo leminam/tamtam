@@ -1,7 +1,9 @@
 .form {
-  padding: 100px 0 215px 0;
-  margin: 0 auto;
-  width: 630px;
+  background-image: url("/static/img/forest-background.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  text-align: center;  
 
     @media (max-width: @tabletWidth) {
       width: 330px;
@@ -18,12 +20,10 @@
       padding: 0 20px 20px 20px;
     }  
   }
-  &__wrapper {
-    background-image: url("/static/img/forest-background.jpg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-    text-align: center;
+  &__inner-wrapper {
+    padding: 100px 0 215px 0;
+    margin: 0 auto;
+    width: 630px;
   }
   &__attention {
     height: 60px;
